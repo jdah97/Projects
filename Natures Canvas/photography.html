@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NC: Photography</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <script src="https://kit.fontawesome.com/7d67834e04.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+  <body id="photo-page">
+    <!-- Side Navigation (Arrows)-->
+    <div class="arrow-left">
+      <!-- From fontawesome -->
+      <i class="fa-solid fa-angle-left alt-colour-text"></i>
+    </div>
+    <div class="arrow-right">
+      <!-- From fontawesome -->
+      <i class="fa-solid fa-angle-right alt-colour-text"></i>
+    </div>
+
+    <!-- Side Navigation (Settings) -->
+    <div class="settings">
+      <!-- From fontawesome -->
+      <i class="fa-solid fa-gear alt-colour-text"></i>
+    </div>
+    <div class="side-nav">
+      <!-- From fontawesome -->
+      <a href="#" class="close-settings"><i class="fa-solid fa-xmark alt-colour-text close-settings"></i></a>
+      <a href="#" class="toggle-button alt-colour-text dark-mode">Light Mode</a>
+      <a href="#" class="nav-help alt-colour-text">How to Navigate</a>
+    </div>
+
+    <!-- Page Guide background to highlight points of intrest -->
+    <div id="page-guide">
+      <svg width="100vw" height="100vh">
+        <defs>
+          <mask id="mask">
+            <rect x="0" y="0" width="100%" height="100%" fill="#fff"/>
+            <rect id="rect" x="-2.5vw" y="0vh" width="10vw" rx='2.5%' height="100vh"/>
+          </mask>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100%" mask="url(#mask)" fill-opacity="0.6"/>    
+      </svg>
+
+      <!-- Page Guide Popup -->
+      <div id="popup">
+        <h3 id="step-title"></h3>
+        <p id="step-text"></p>
+        <button id="next-btn"></button>
+      </div>
+    </div>
+
+    <!-- Artwork Medium Popup -->
+    <div id="medium-popup-overlay"></div>
+    <div id="medium-popup-content">
+      <h2 id="medium-popup-title"></h2>
+      <!-- From fontawesome -->
+      <button id="close-medium-popup"><i class="fa-solid fa-xmark"></i></button>
+      <div id="medium-popup-text"></div>
+    </div>
+
+    <!-- Main Container for Horizontal scroll -->
+    <div class="scroll-container">
+      <div class="scroll-wrapper">
+
+        <!-- Panel 1: Artwork 1 -->
+        <section class="main-content artwork-container" id="panel-1">
+          <div class="artwork">
+            <img src="images/Artworks/ph1.jpg" alt="Photo of a wilting sunflower">
+          </div>
+          <div class="artwork-info">
+            <div class="artwork-title">
+              <p>Fading Radiance</p>
+            </div>
+            <div class="artwork-desc">
+              <span><b>2021</b></span>
+              <p>A wilting sunflower gracefully lying on a white backdrop. 
+                Despite its fading state, the artwork conveys a profound message 
+                of enduring beauty in imperfection. The wilting petals and subdued 
+                colors evoke a sense of acceptance and appreciation for the 
+                transient nature of life, reminding viewers that even in decline, 
+                there is a quiet elegance that remains.
+              </p>
+            </div>
+            <a href="#" class="artwork-medium" data-medium="photography">Photography</a>
+            <div class="artwork-price">
+              <p>$160.00 AUD</p>
+            </div>
+            <a href="index.html#panel-4">
+              <button class="contact-button">Contact</button>
+            </a>
+          </div>
+        </section>
+
+        <!-- Panel 2: Artwork 2 -->
+        <section class="main-content artwork-container" id="panel-2">
+          <div class="artwork">
+            <img src="images/Artworks/ph4.jpg" alt="Acrylic painting of begonia">
+          </div>
+          <div class="artwork-info">
+            <div class="artwork-title">
+              <p>Natures Jewels</p>
+            </div>
+            <div class="artwork-desc">
+              <span><b>2021</b></span>
+              <p>A mesmerizing macro shot captures nature's post-storm enchantment: 
+                a large leaf adorned with glistening water droplets, reflecting 
+                miniature universes of refracted light. Its delicate texture and 
+                vivid green tones are showcased, evoking the transient beauty of water. 
+                This captivating photograph invites viewers to immerse themselves in 
+                the intricate patterns and alluring charm of the natural world's 
+                tiniest elements.
+              </p>
+            </div>
+            <a href="#" class="artwork-medium" data-medium="photography">Photography</a>
+            <div class="artwork-price">
+              <p>$150.00 AUD</p>
+            </div>
+            <a href="index.html#panel-4">
+              <button class="contact-button">Contact</button>
+            </a>
+          </div>
+        </section>
+
+        <!-- Panel 3: Artwork 3 -->
+        <section class="main-content artwork-container" id="panel-3">
+          <div class="artwork">
+            <img src="images/Artworks/ph7.jpg" alt="Acrylic painting of begonia">
+          </div>
+          <div class="artwork-info">
+            <div class="artwork-title">
+              <p>Power in Repose</p>
+            </div>
+            <div class="artwork-desc">
+              <span><b>2023</b></span>
+              <p>A captivating close-up shot unveils the tranquil essence of a slumbering 
+                tiger. The photograph zooms in on the tiger's countenance, capturing the 
+                serenity that graces its face as it peacefully dozes off in the comforting 
+                shade. Every intricate detail, from the softness of its fur to the gentle 
+                curve of its whiskers, is meticulously portrayed, inviting viewers into a 
+                realm of quietude and wonder. With closed eyes and an air of undisturbed 
+                calm, the tiger becomes a symbol of untamed beauty and profound stillness.
+              </p>
+            </div>
+            <a href="#" class="artwork-medium" data-medium="photography">Photography</a>
+            <div class="artwork-price">
+              <p>$250.00 AUD</p>
+            </div>
+            <a href="index.html#panel-4">
+              <button class="contact-button">Contact</button>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Footer Navigation (Thumbnails) -->
+    <footer class="main-nav">
+      <nav class="nav-thumbs">
+        <a href="#panel-1" class="nav-link active"><img src="images/Thumbnails/ph1.jpg" alt="Galleries" class="nav-img"></a>
+        <a href="#panel-2" class="nav-link"><img src="images/Thumbnails/ph4.png" alt="Galleries" class="nav-img"></a>
+        <a href="#panel-3" class="nav-link"><img src="images/Thumbnails/ph7.png" alt="Galleries" class="nav-img"></a>
+        <!-- From fontawesome - edited by me -->
+        <a href="index.html#panel-1"><img src="images/Thumbnails/house-solid.png" alt="Home page" class="nav-img"></a>
+      </nav>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

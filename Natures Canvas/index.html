@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nature's Canvas</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <!-- https://fontawesome.com/icons -->
+    <script src="https://kit.fontawesome.com/7d67834e04.js" crossorigin="anonymous"></script>
+    <!-- https://developers.google.com/speed/libraries#jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+  <body id="home-page">
+    <!-- Side Navigation (Arrows)-->
+    <div class="arrow-left">
+      <!-- From fontawesome -->
+      <i class="fa-solid fa-angle-left alt-colour-text"></i>
+    </div>
+    <div class="arrow-right">
+      <!-- From fontawesome -->
+      <i class="fa-solid fa-angle-right alt-colour-text"></i>
+    </div>
+
+    <!-- Side Navigation (Settings) -->
+    <div class="settings">
+      <!-- From fontawesome -->
+      <i class="fa-solid fa-gear alt-colour-text"></i>
+    </div>
+    <div class="side-nav">
+      <!-- From fontawesome -->
+      <a href="#" class="close-settings"><i class="fa-solid fa-xmark alt-colour-text close-settings"></i></a>
+      <a href="#" class="toggle-button alt-colour-text dark-mode">Light Mode</a>
+      <a href="#" class="nav-help alt-colour-text">How to Navigate</a>
+    </div>
+
+    <!-- Page Guide background to highlight points of intrest -->
+    <div id="page-guide">
+      <svg width="100vw" height="100vh">
+        <defs>
+          <mask id="mask">
+            <rect x="0" y="0" width="100%" height="100%" fill="#fff"/>
+            <rect id="rect" x="-2.5vw" y="0vh" width="10vw" rx='2.5%' height="100vh"/>
+          </mask>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100%" mask="url(#mask)" fill-opacity="0.6"/>    
+      </svg>
+
+      <!-- Page Guide Popup -->
+      <div id="popup">
+        <h3 id="step-title"></h3>
+        <p id="step-text"></p>
+        <button id="next-btn"></button>
+      </div>
+    </div>
+
+    <!-- Artwork Medium Popup -->
+    <div id="medium-popup-overlay"></div>
+    <div id="medium-popup-content">
+      <h2 id="medium-popup-title"></h2>
+      <!-- From fontawesome -->
+      <button id="close-medium-popup"><i class="fa-solid fa-xmark"></i></button>
+      <div id="medium-popup-text"></div>
+    </div>
+
+    <!-- Form Confirmation Popup -->
+    <div id="form-popup-overlay"></div>
+    <div id="form-popup-content">
+      <h2 id="form-popup-title"></h2>
+      <div id="form-popup-text"></div>
+      <div id="form-popup-buttons">
+        <button id="submit-form-popup">SUBMIT</button>
+        <button id="close-form-popup">CANCEL</button>
+      </div>
+    </div>
+
+    <!-- Main Container for Horizontal scroll -->
+    <div class="scroll-container">
+      <div class="scroll-wrapper">
+
+        <!-- Panel 1: Home Page -->
+        <section class="main-content" id="panel-1">
+          
+          <div class="home-info">
+            <div class="home-title">
+              <p class="alt-colour-text">Nature's Canvas</p>
+            </div>
+
+            <div class="home-desc">
+              <span class="alt-colour-text"><b>Inspired by Nature, Shaped by Creativity and Bio-mimicry</b></span>
+              <br>
+              <p>Welcome to Nature's Canvas, where art and nature intersect to create 
+                something truly unique. This gallery is a celebration of the 
+                <b class="text-bubble">beauty</b> and <b class="text-bubble">complexity</b>
+                of the natural world, and the ways in which it inspires human creativity. 
+                I believe that the key to great art is a deep appreciation for the intricate 
+                patterns, forms, and structures found in the natural world, and that 
+                <b class="text-bubble">bio-mimicry</b> offers a powerful tool for 
+                unlocking new artistic possibilities. So come explore, be inspired, 
+                and see the world in a new way.
+              </p> 
+
+              <div>
+                <!-- From fontawesome -->
+                <a href="#"><i class="fa-brands fa-facebook-f alt-colour-text"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram alt-colour-text"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in alt-colour-text"></i></a>
+              </div>  
+            </div>
+          </div>
+        </section>
+
+        <!-- Panel 2: About Page -->
+        <section class="main-content artwork-container" id="panel-2">
+
+          <div class="artwork">
+            <img src="images/Artworks/about.jpg" alt="Self portrait">
+          </div>
+
+          <div class="artwork-info">
+            <div class="artwork-title">
+              <p>About Me</p>
+            </div>
+
+            <div class="artwork-desc">
+              <span><b>1977</b></span>
+              <p>Hi, my name is Elisa, and I'm a South Coast based artist.
+                I love exploring what quirky and wonderful things nature and 
+                domestic spaces have to offer
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Panel 3: Galleries Page -->
+        <section class="main-content" id="panel-3">
+
+          <table class="gallery">
+            <tr>
+              <td>
+                <a href="paintings.html"><img src="images/Artworks/PAINT.png" alt="Gallery 1 - Painting"></a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="photography.html"><img src="images/Artworks/SHOOT.png" alt="Gallery 2 - Photography"></a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="sketching.html"><img src="images/Artworks/DRAW.png" alt="Gallery 3 - Sketching"></a>
+              </td>
+            </tr>
+          </table>
+        </section> 
+
+        <!-- Panel 4: Contact Page -->
+        <section class="main-content" id="panel-4">
+
+          <div class="contact-container">
+            <h1 class="alt-colour-text">Contact Us</h1>
+        
+            <form id="contact-form">
+              <div class="form-row">
+                <div class="form-col">
+                  <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                  <span class="error-message" id="first-name-error"></span>
+                </div>
+
+                <div class="form-col">
+                  <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                  <span class="error-message" id="last-name-error"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-col">
+                  <input type="tel" id="phone" name="phone" placeholder="Phone" pattern="[0-9]{10}" required>
+                  <span class="error-message" id="phone-error"></span>
+                </div>
+                <div class="form-col">
+                  <input type="email" id="email" name="email" placeholder="Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                  <span class="error-message" id="email-error"></span>
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-col">
+                  <select id="artwork" name="artwork" required>
+                    <option value="">Select Artwork</option>
+                    <optgroup label="Paint">
+                      <option value="option1">'Moody' Polka dot Begonia</option>
+                      <option value="option2">Banksias</option>
+                      <option value="option3">Christ's Suffering</option>
+                      <option value="option4">Pastel Dreams</option>
+                      <option value="option5">Prayer Plant</option>
+                      <option value="option6">Morning Glow</option>
+                    </optgroup>
+                    <optgroup label="Shoot">
+                      <option value="option7">Fading Radiance</option>
+                      <option value="option8">Select artwork</option>
+                      <option value="option9">Select artwork</option>
+                    </optgroup>
+                    <optgroup label="Draw">
+                      <option value="option10">Gilded Harmony</option>
+                      <option value="option11">Whispers of Form</option>
+                      <option value="option12">Shifting Perspectives</option>
+                      <option value="option13">Embracing Self</option>
+                      <option value="option14">Golden Shores</option>
+                    </optgroup>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-col">
+                  <textarea id="message" name="message" placeholder="Message" required></textarea>
+                  <span class="error-message" id="message-error"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-col">
+                  <input type="submit" id="send" value="SEND">
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </section>
+
+      </div>
+    </div>  
+
+    <!-- Footer Navigation (Thumbnails) -->
+    <footer class="main-nav">
+      <nav class="nav-thumbs">
+        <!-- From fontawesome - edited by me -->
+        <a href="#panel-1" class="nav-link active"><img src="images/Thumbnails/house-solid.png" alt="Home page" class="nav-img"></a>
+        <a href="#panel-2" class="nav-link"><img src="images/Thumbnails/logo.jpg" alt="About page" class="nav-img"></a>
+        <a href="#panel-3" class="nav-link"><img src="images/Thumbnails/bars-solid.png" alt="Galleries" class="nav-img"></a>
+        <a href="#panel-4" class="nav-link"><img src="images/Thumbnails/envelope-solid.png" alt="Contact" class="nav-img"></a>
+      </nav>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

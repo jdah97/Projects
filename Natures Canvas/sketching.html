@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NC: Skecthing</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <script src="https://kit.fontawesome.com/7d67834e04.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+  <body id="sketching-page">
+    <!-- Side Navigation (Arrows)-->
+    <div class="arrow-left">
+      <!-- From fontawesome -->
+      <i class="fa-solid fa-angle-left alt-colour-text"></i>
+    </div>
+    <div class="arrow-right">
+      <!-- From fontawesome -->
+      <i class="fa-solid fa-angle-right alt-colour-text"></i>
+    </div>
+
+    <!-- Side Navigation (Settings) -->
+    <div class="settings">
+      <!-- From fontawesome -->
+      <i class="fa-solid fa-gear alt-colour-text"></i>
+    </div>
+    <div class="side-nav">
+      <!-- From fontawesome -->
+      <a href="#" class="close-settings"><i class="fa-solid fa-xmark alt-colour-text close-settings"></i></a>
+      <a href="#" class="toggle-button alt-colour-text dark-mode">Light Mode</a>
+      <a href="#" class="nav-help alt-colour-text">How to Navigate</a>
+    </div>
+
+    <!-- Page Guide background to highlight points of intrest -->
+    <div id="page-guide">
+      <svg width="100vw" height="100vh">
+        <defs>
+          <mask id="mask">
+            <rect x="0" y="0" width="100%" height="100%" fill="#fff"/>
+            <rect id="rect" x="-2.5vw" y="0vh" width="10vw" rx='2.5%' height="100vh"/>
+          </mask>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100%" mask="url(#mask)" fill-opacity="0.6"/>    
+      </svg>
+
+      <!-- Page Guide Popup -->
+      <div id="popup">
+        <h3 id="step-title"></h3>
+        <p id="step-text"></p>
+        <button id="next-btn"></button>
+      </div>
+    </div>
+
+    <!-- Artwork Medium Popup -->
+    <div id="medium-popup-overlay"></div>
+    <div id="medium-popup-content">
+      <h2 id="medium-popup-title"></h2>
+      <!-- From fontawesome -->
+      <button id="close-medium-popup"><i class="fa-solid fa-xmark"></i></button>
+      <div id="medium-popup-text"></div>
+    </div>
+
+    <!-- Main Container for Horizontal scroll -->
+    <div class="scroll-container">
+      <div class="scroll-wrapper">
+
+        <!-- Panel 1: Artwork 1 -->
+        <section class="main-content artwork-container" id="panel-1">
+          <div class="artwork">
+            <img src="images/Artworks/sk1.jpg" alt="Gilded Harmony">
+          </div>
+          <div class="artwork-info">
+            <div class="artwork-title">
+              <p>Gilded Harmony</p>
+            </div>
+            <div class="artwork-desc">
+              <span><b>2021</b></span>
+              <p>A captivating pointillism drawing with gold dots scattered across 
+                a deep navy background. The varying densities of the dots create a 
+                visually engaging composition that balances between intricacy and 
+                openness.
+              </p>
+            </div>
+            <a href="#" class="artwork-medium" data-medium="stippling">Stippling</a>
+            <div class="artwork-price">
+              <p>$250.00 AUD</p>
+            </div>
+            <a href="index.html#panel-4">
+              <button class="contact-button">Contact</button>
+            </a>
+          </div>
+        </section>
+
+        <!-- Panel 2: Artwork 2 -->
+        <section class="main-content artwork-container" id="panel-2">
+          <div class="artwork">
+            <img src="images/Artworks/sk2.jpg" alt="Whispers of Form">
+          </div>
+          <div class="artwork-info">
+            <div class="artwork-title">
+              <p>Whispers of Form</p>
+            </div>
+            <div class="artwork-desc">
+              <span><b>2022</b></span>
+              <p>The delicate dots, reminiscent of scattered sand in the wind, create 
+                an ethereal effect that gently shapes the features of a face. As 
+                the dots spread out towards the edges, they evoke a sense of movement 
+                and transience, as if carried away by an invisible breeze.
+              </p>
+            </div>
+            <a href="#" class="artwork-medium" data-medium="stippling"><b>Stippling</b></a>
+            <div class="artwork-price">
+              <p>$200.00 AUD</p>
+            </div>
+            <a href="index.html#panel-4">
+              <button class="contact-button">Contact</button>
+            </a>
+          </div>
+        </section>
+
+        <!-- Panel 3: Artwork 3 -->
+        <section class="main-content artwork-container" id="panel-3">
+          <div class="artwork">
+            <img src="images/Artworks/sk4.jpg" alt="Shifting Perspectives">
+          </div>
+          <div class="artwork-info">
+            <div class="artwork-title">
+              <p>Shifting Perspectives</p>
+            </div>
+            <div class="artwork-desc">
+              <span><b>2021</b></span>
+              <p>Dots, randomly placed with dark dense areas. The artwork's abstract 
+                nature allows for limitless interpretation, where viewers may discern 
+                a variety of images. The intentional ambiguity invites curiosity and 
+                imagination, prompting observers to delve into the depths of their 
+                own perceptions and unravel the hidden narratives within the artwork. 
+              </p>
+            </div>
+            <a href="#" class="artwork-medium" data-medium="stippling">Stippling</a>
+            <div class="artwork-price">
+              <p>$160.00 AUD</p>
+            </div>
+            <a href="index.html#panel-4">
+              <button class="contact-button">Contact</button>
+            </a>
+          </div>
+        </section>
+
+        <!-- Panel 4: Artwork 4 -->
+        <section class="main-content artwork-container" id="panel-4">
+          <div class="artwork">
+            <img src="images/Artworks/sk5.jpg" alt="Acrylic painting of begonia">
+          </div>
+          <div class="artwork-info">
+            <div class="artwork-title">
+              <p>Embracing Self</p>
+            </div>
+            <div class="artwork-desc">
+              <span><b>2021</b></span>
+              <p>a captivating sketch portraying a single hand cradled within its 
+                own gentle grasp, expertly rendered with white pencil on black paper. 
+                The monochromatic contrast enhances the introspective mood of the 
+                artwork. The intricate details and delicate strokes evoke a sense of 
+                sacredness, fragility, and self-worth. Symbolizing self-care, 
+                self-acceptance, and inner strength, the hand encapsulates the essence 
+                of personal growth and resilience.
+              </p>
+            </div>
+            <a href="#" class="artwork-medium" data-medium="white-pencil">White Pencil on Black Paper</a>
+            <div class="artwork-price">
+              <p>$200.00 AUD</p>
+            </div>
+            <a href="index.html#panel-4">
+              <button class="contact-button">Contact</button>
+            </a>
+          </div>
+        </section>
+
+        <!-- Panel 5: Artwork 5 -->
+        <section class="main-content artwork-container" id="panel-5">
+          <div class="artwork">
+            <img src="images/Artworks/sk8.jpg" alt="Golden Shores">
+          </div>
+          <div class="artwork-info">
+            <div class="artwork-title">
+              <p>Golden Shores</p>
+            </div>
+            <div class="artwork-desc">
+              <span><b>2021</b></span>
+              <p>An enchanting pointillism painting featuring a black background 
+                adorned with meticulously placed gold dots. In this mesmerizing 
+                artwork, the negative space takes on the shape of islands emerging 
+                from a vast expanse of golden ocean. The contrasting elements
+                of the dark islands against the radiant golden ocean invite viewers 
+                to immerse themselves in a dreamscape where imagination can wander 
+                freely.
+              </p>
+            </div>
+            <a href="#" class="artwork-medium" data-medium="stippling">Stippling</a>
+            <div class="artwork-price">
+              <p>$250.00 AUD</p>
+            </div>
+            <a href="index.html#panel-4">
+              <button class="contact-button">Contact</button>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Footer Navigation (Thumbnails) -->
+    <footer class="main-nav">
+      <nav class="nav-thumbs">
+        <a href="#panel-1" class="nav-link active"><img src="images/Thumbnails/sk1.jpg" alt="Galleries" class="nav-img"></a>
+        <a href="#panel-2" class="nav-link"><img src="images/Thumbnails/sk2.jpg" alt="Galleries" class="nav-img"></a>
+        <a href="#panel-3" class="nav-link"><img src="images/Thumbnails/sk4.jpg" alt="Galleries" class="nav-img"></a>
+        <a href="#panel-4" class="nav-link"><img src="images/Thumbnails/sk5.jpg" alt="Galleries" class="nav-img"></a>
+        <a href="#panel-5" class="nav-link"><img src="images/Thumbnails/sk8.jpg" alt="Galleries" class="nav-img"></a>
+        <!-- From fontawesome - edited by me -->
+        <a href="index.html#panel-1"><img src="images/Thumbnails/house-solid.png" alt="Home page" class="nav-img"></a>
+      </nav>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
